@@ -1,0 +1,8 @@
+[build]
+  publish = "proyecto"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/LOGINPrincipal.php"
+  status = 200
