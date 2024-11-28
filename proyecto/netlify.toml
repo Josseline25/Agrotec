@@ -1,13 +1,9 @@
 [build]
   publish = "public"
-  command = "npm run build"
+  command = "apt-get update && apt-get install -y default-libmysqlclient-dev && npm run build"
 
 [build.environment]
   MYSQLCLIENT_VERSION = "8.0"
-
-[build.command]
-  # Preinstalación de bibliotecas MySQL
-  - apt-get update && apt-get install -y default-libmysqlclient-dev
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core-binaries"
