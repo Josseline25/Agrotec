@@ -1,9 +1,6 @@
 [build]
   publish = "proyecto"
-  command = "npm run build"
-
-[build.command]
-  - apt-get update && apt-get install -y libmariadb-dev
+  command = "apt-get update && apt-get install -y libmariadb-dev && npm run build"
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core-binaries"
